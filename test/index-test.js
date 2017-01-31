@@ -1,10 +1,10 @@
-describe('Oldercoaster', function () {
+describe('OlderCoaster', function () {
   before(function () {
     this.wrapper = enzyme.shallow(React.createElement(OlderCoaster));
   });
 
   it('should have been created using `React.createClass()`', function () {
-    expect(OlderCoaster.name).toExist('The `Oldercoaster` component is being created using a ES2015 class.');
+    expect(OlderCoaster.name).toNotExist('The `Oldercoaster` component is being created using a ES2015 class.');
   });
 
   it('should have the right DOM markup', function () {
@@ -39,4 +39,3 @@ describe('ButcherShop', function () {
     expect(this.wrapper.html()).toEqual(`<div class="butcher-shop"><p>Hello! We have the following products for sale today:</p><ul><li>Tenderloin</li><li>Short ribs</li><li>Beef shin</li><li>Ribeye</li></ul></div>`);
   });
 });
-
